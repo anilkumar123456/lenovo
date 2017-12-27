@@ -1,0 +1,15 @@
+     <project name="lenovo" default="package">
+      <target name="mkdir">
+             <mkdir dir="target"/>
+     </target>
+          <target name="compilation">
+            <javac srcdir="src" destdir="target"/>
+              </target>
+         <target name="package" depends="clean,mkdir,compilation">
+       <jar basedir="target" destfile="lenovo.jar"/>   
+          </target>
+<target name="clean">
+<delete dir="target"/>
+<delete file="lenovo"/>
+</target>
+</project>
